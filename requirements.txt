@@ -1,0 +1,6 @@
+echo "pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+jupyter" > requirements.txt

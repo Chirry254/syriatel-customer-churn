@@ -1,0 +1,6 @@
+echo "__pycache__/
+.ipynb_checkpoints/
+*.csv
+*.pdf
+.env
+.DS_Store" > .gitignore
