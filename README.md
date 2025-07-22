@@ -42,8 +42,19 @@ Target: churn (0 = Stayed, 1 = Churned)
 Example features:
 
 international plan, total day charge, customer service calls, voice mail plan, etc.
+### 🔀 Train-Test Split
+
+To evaluate our models properly, we split the dataset into training and test sets using an 80/20 split.
+
+We use **stratification** on the target to preserve the churn rate distribution in both sets.
 
 ## Modeling
+Our goal is to build predictive models that can accurately identify customers who are likely to churn. We will begin with logistic regression as a baseline model, then implement decision trees, and finally tune hyperparameters to improve performance.
+
+We will evaluate model performance using:
+- Accuracy, Precision, Recall, F1-Score
+- Confusion Matrix
+- ROC Curve & AUC Score
 Models used: Logistic Regression, Decision Tree,
 🔍 Exploratory Data Analysis (EDA)
 Churn rate is ~14.5%
@@ -57,6 +68,12 @@ International plans
 Frequent customer service calls
 
 Most customers don’t use voicemail services
+### 📈 ROC Curve and AUC
+
+Receiver Operating Characteristic (ROC) curve helps evaluate classifier performance across all classification thresholds.
+
+AUC (Area Under Curve) closer to 1.0 indicates a good model.
+![alt text](image-1.png)
 
 🧪 Data Preparation
 Removed irrelevant columns (phone number)
@@ -122,6 +139,8 @@ prediction = dt.predict(sample_processed)
 
 print("Churn Prediction:", "Yes" if prediction[0] == 1 else "No")
 ✅ Output: Churn Prediction: Yes
+# Confusion Matrix
+![alt text](image.png)
 
 🔎 Feature Importance
 Feature	Importance
@@ -133,4 +152,9 @@ number vmail messages	0.070
 
 ## Conclusion
 Recommendations for reducing churn are based on feature importance and predictions.
+Target customers with international plans or high service call frequency.
+- Improve support quality for customers with frequent inquiries.
+- Use the model in customer retention workflows for early intervention.
+- Incentivize international usage : Provide better rates for international plans to reduce churn.
+- Enhance customer support: Reduce churn by resolving issues faster and more efficiently
 " > README.md
