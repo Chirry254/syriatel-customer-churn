@@ -4,3 +4,13 @@ scikit-learn
 matplotlib
 seaborn
 jupyter" > requirements.txt
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+jupyter
+echo "## Recommendations for Reducing Churn
+notebook             # If you're using Jupyter notebooks
+ipykernel            # If you're running Jupyter kernels locally
+## Recommendations for Reducing Churn
