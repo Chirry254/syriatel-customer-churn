@@ -139,6 +139,12 @@ prediction = dt.predict(sample_processed)
 
 print("Churn Prediction:", "Yes" if prediction[0] == 1 else "No")
 ✅ Output: Churn Prediction: Yes
+## 🌲 Random Forest Classifier
+
+The Random Forest model is an ensemble method that builds multiple decision trees and merges their results to improve predictive accuracy and control overfitting. It is well-suited for handling structured data like ours and helps identify the most important features influencing customer churn.
+
+We trained a Random Forest Classifier using the same scaled dataset and evaluated its performance using accuracy, ROC-AUC, and feature importances.
+![alt text](image-2.png)
 # Confusion Matrix
 ![alt text](image.png)
 
